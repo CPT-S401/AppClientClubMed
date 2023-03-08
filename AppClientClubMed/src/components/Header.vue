@@ -4,7 +4,7 @@
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
           <span class="sr-only">Club Med</span>
-          <logoClubMed class="h-8 w-auto text-[#00558A]" />
+          <logoClubMed class="h-8 w-auto text-primary-blue" />
         </a>
       </div>
       <div class="flex lg:hidden">
@@ -52,7 +52,7 @@
       </PopoverGroup>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <a href="#" class="text-sm font-semibold leading-6 text-gray-900">
-          <iconUser class="h-10 w-10 flex-none text-[#00558A]" aria-hidden="true" />
+          <iconUser class="h-10 w-10 flex-none text-primary-blue" aria-hidden="true" />
         </a>
       </div>
     </nav>
@@ -62,7 +62,7 @@
         <div class="flex items-center justify-between">
           <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">ClubMed</span>
-            <logoClubMed class="h-8 w-auto text-[#00558A] "/>
+            <logoClubMed class="h-8 w-auto text-primary-blue "/>
           </a>
           <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
             <span class="sr-only">Close menu</span>
@@ -87,7 +87,7 @@
             </div>
             <div class="py-6">
               <a href="#" class="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                <iconUser class="h-10 w-10 flex-none text-[#00558A]" aria-hidden="true" />
+                <iconUser class="h-10 w-10 flex-none text-primary-blue" aria-hidden="true" />
               </a>
             </div>
           </div>
