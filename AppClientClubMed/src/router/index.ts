@@ -1,14 +1,29 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+
+import PublicLayout from '@/layouts/PublicLayout.vue'
+
+import HomeView from '@/views/Public/HomeView.vue'
+import DashboardView from '@/views/Auth/DashboardView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HomeView
+      name: 'public',
+      component: PublicLayout,
+      children: [
+        { path: '/', component: HomeView },
+      ]
     },
+    {
+      path: '/dashboard',
+      name: 'dashboard',
+      component: DashboardView
+    },
+    {
+      path: '/:pathMatch(.*)*', redirect: '/' // redirect à la page home si pas de route
+    }
   ]
 })
 
