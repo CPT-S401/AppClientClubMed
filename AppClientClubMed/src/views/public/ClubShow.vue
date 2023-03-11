@@ -12,5 +12,5 @@ export default{
 </script>
 
 <script setup>
-import Carousel from '@/components/Carousel.vue'
+import Carousel from '@/components/Carousel/Carousel.vue'
 </script>
