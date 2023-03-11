@@ -1,32 +1,39 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import PublicLayout from '@/layouts/PublicLayout.vue'
-import AuthLayout from '@/layouts/AuthLayout.vue'
+import * as Public from './importsEachLayer/publicImports.js'
+import * as Auth from './importsEachLayer/authImports.js'
 
-import HomeView from '@/views/Public/HomeView.vue'
-import ResaView from '@/views/Auth/ResaView.vue'
+import NotFoundPage from '@/views/errors/404NotFoundView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      path: '/club',
+      name: 'club' ,
+      component: Public.ClubShow,
+    },
+    {
       path: '/',
       name: 'public',
-      component: PublicLayout,
+      component: Public.PublicLayout,
       children: [
-        { path: '/', component: HomeView },
+        { path: '/', name: 'home' , component: Public.HomeView },
+        { path: '/club/:id', name: 'club' , component: Public.ClubShow },
       ]
     },
     {
-      path: '/dashboard',
-      name: 'dashboard',
-      component: AuthLayout,
+      path: '/user',
+      name: 'user',
+      component: Auth.AuthLayout,
       children: [
-        { path: '/reservation', component: ResaView },
+        { path: '/dashboard', name: 'dashboard' , component: Auth.DashboardView }, //  meta: { requiresAuth: true } pour protéger la route
+        { path: '/reservation', name: 'reservation' , component: Auth.ResaView },
       ]
     },
     {
-      path: '/:pathMatch(.*)*', redirect: '/' // redirect à la page home si pas de route
+      // redirect à la page NotFound si pas de route
+      path: '/:pathMatch(.*)*', name: 'notFound', component: NotFoundPage
     }
   ]
 })

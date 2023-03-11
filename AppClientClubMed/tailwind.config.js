@@ -6,12 +6,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors:{
-        primary:{
+      colors: {
+        primary: {
           "blue": "#00558A"
         }
-      }
+      },
     },
-    },
-    plugins: [require("daisyui")],
+  },
+  plugins: [require("daisyui")],
 }
