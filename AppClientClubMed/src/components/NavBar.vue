@@ -50,7 +50,7 @@
         <a href="#" class="text-sm font-semibold leading-6 text-gray-900">FAQ</a>
       </PopoverGroup>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <router-link to="/dashboard"
+        <router-link to="/user/dashboard"
         class="text-sm font-semibold leading-6 text-gray-900">
           <iconUser class="h-10 w-10 flex-none text-primary-blue" aria-hidden="true" />
         </router-link>

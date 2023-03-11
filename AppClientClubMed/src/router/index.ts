@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import * as Public from './importsEachLayer/publicImports.js'
 import * as Auth from './importsEachLayer/authImports.js'
+import * as Admin from './importsEachLayer/adminImports.js'
+
 
 import NotFoundPage from '@/views/errors/404NotFoundView.vue'
 
@@ -27,8 +29,16 @@ const router = createRouter({
       name: 'user',
       component: Auth.AuthLayout,
       children: [
-        { path: '/dashboard', name: 'dashboard' , component: Auth.DashboardView }, //  meta: { requiresAuth: true } pour protéger la route
-        { path: '/reservation', name: 'reservation' , component: Auth.ResaView },
+        { path: 'dashboard', name: 'userDashboard' , component: Auth.DashboardView }, //  meta: { requiresAuth: true } pour protéger la route
+        { path: 'reservation', name: 'reservation' , component: Auth.ResaView },
+      ]
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: Admin.AdminLayout,
+      children: [
+        { path: 'dashboard', name: 'adminDashboard' , component: Admin.DashboardView}, //  meta: { requiresAuth: true } pour protéger la route
       ]
     },
     {
