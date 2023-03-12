@@ -9,8 +9,7 @@ import cardClubDetail from '@/components/cardClubDetail.vue'
         <p class="mt-2 text-xs text-white dark:text-gray-400">
             Vous trouverez ici la liste de vos réservations.</p>
 
-        <cardClubDetail
-            imagePath="https://www.lechotouristique.com/wp-content/uploads/2021/12/club-med-la-rosiere1.png"
+        <cardClubDetail imagePath="https://www.lechotouristique.com/wp-content/uploads/2021/12/club-med-la-rosiere1.png"
             title="Club Med La Rosière"
             description="A 1950 mètres d''altitude et exposé plein sud, le Resort Club Med habillé de pierres et de bois surplombe toute la vallée de la Tarentaise. Edifié sur les pistes, il domine une station authentique développée avec raison et passion par les habitants de Montvalezan. Le design intérieur de style savoyard nous conte la fabuleuse histoire du col mythique du Petit St-Bernard, de la traversée des Alpes d’Hannibal avec ses éléphants aux pèlerins de passage en haute-montagne, comme en témoigne la fresque de la réception."
             developer="Nintendo" releaseDate="March 3, 2017" />
@@ -43,8 +42,8 @@ import cardClubDetail from '@/components/cardClubDetail.vue'
             </div>
 
             <button
-                class="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">Check
-                out</button>
+                class="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">
+                Check out</button>
         </div>
         <!-- totals - end -->
     </div>
