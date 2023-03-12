@@ -61,11 +61,72 @@
                         class="mb-1 inline-block text-center text-lg font-bold transition duration-100 hover:text-gray-500 lg:text-xl">
                         Participants
                     </div>
-                    <!-- Pense un tableau avec pour chaque colonne, le nommage : nom, prenom, date de naissance -->
-                    <p>M. NOM Clément 00/00/0000</p>
-                    <p>M. NOM Sam 00/00/0000</p>
-                    <p>M. NOM Julien 00/00/0000</p>
-                    <p>M. NOM Néo 00/00/0000</p>
+                    <!-- prochaine étape pour le tableau : le mettre dans un composant -->
+                    <div class="">
+                        <div class="overflow-x-auto border-x border-t">
+                            <table class="table-auto w-full">
+                                <thead class="border-b">
+                                    <tr class="">
+                                        <th class="text-left p-2 font-medium">
+                                            Nom
+                                        </th>
+                                        <th class="text-left p-2 font-medium">
+                                            Prénom
+                                        </th>
+                                        <th class="text-left p-2 font-medium">
+                                            Date de naissance
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b hover:bg-gray-700">
+                                        <td class="p-2">
+                                            M. NOM1
+                                        </td>
+                                        <td class="p-2">
+                                            Clément
+                                        </td>
+                                        <td class="p-2">
+                                            00/00/0000
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b hover:bg-gray-700">
+                                        <td class="p-2">
+                                            M. NOM2
+                                        </td>
+                                        <td class="p-2">
+                                            Sam
+                                        </td>
+                                        <td class="p-2">
+                                            00/00/0000
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b hover:bg-gray-700">
+                                        <td class="p-2">
+                                            M. NOM3
+                                        </td>
+                                        <td class="p-2">
+                                            Julien
+                                        </td>
+                                        <td class="p-2">
+                                            00/00/0000
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b hover:bg-gray-700">
+                                        <td class="p-2">
+                                            M. NOM4
+                                        </td>
+                                        <td class="p-2">
+                                            Néo
+                                        </td>
+                                        <td class="p-2">
+                                            00/00/0000
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="flex w-full space-x-7 border-t p-4 sm:w-auto sm:border-none sm:pl-0 lg:p-6 lg:pl-0">
