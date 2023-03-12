@@ -30,7 +30,7 @@ const router = createRouter({
       component: Auth.AuthLayout,
       children: [
         { path: 'dashboard', name: 'userDashboard' , component: Auth.DashboardView }, //  meta: { requiresAuth: true } pour protéger la route
-        { path: 'reservation', name: 'reservation' , component: Auth.ResaView },
+        { path: 'reservations', name: 'reservations' , component: Auth.ResaView },
       ]
     },
     {

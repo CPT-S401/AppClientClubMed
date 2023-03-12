@@ -14,7 +14,7 @@
                         <router-view class="-mt-0.5 mx-4"/>
 
                         <!-- /Footer -->
-                        <footer class="flex flex-col bg-white p-6 dark:bg-primary-blue">
+                        <footer class="flex flex-col mt-4 bg-white p-6 dark:bg-primary-blue">
                             <div class="flex flex-col justify-between">
                                 <div class="mb-0">
                                     <a href="#" class="-m-1.5 p-1.5">

@@ -809,7 +809,7 @@
                         <!-- ./Contact Form -->
 
                         <!-- External resources -->
-                        <div class="mt-8 mx-4 mb-4">
+                        <div class="mt-8 mx-4">
                             <div
                                 class="p-4 bg-blue-50 dark:bg-gray-800 dark:text-gray-50 border border-blue-500 dark:border-gray-500 rounded-lg shadow-md">
                                 <h4 class="text-lg font-semibold">Have taken ideas & reused components from the following
@@ -897,7 +897,7 @@
                         
 
                         <!-- /Footer -->
-                        <footer class="flex flex-col bg-white p-6 dark:bg-primary-blue">
+                        <footer class="flex flex-col mt-4 bg-white p-6 dark:bg-primary-blue">
                             <div class="flex flex-col justify-between">
                                 <div class="mb-0">
                                     <a href="#" class="-m-1.5 p-1.5">
