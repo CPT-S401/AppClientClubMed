@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import cardClubDetail from '@/components/cardClubDetail.vue' 
+import cardClubResa from '@/components/cardClubResa.vue' 
 </script>
 
 <template>
@@ -9,7 +9,7 @@ import cardClubDetail from '@/components/cardClubDetail.vue'
         <p class="mt-2 text-xs text-white dark:text-gray-400">
             Vous trouverez ici la liste de vos réservations.</p>
 
-        <cardClubDetail imagePath="https://www.lechotouristique.com/wp-content/uploads/2021/12/club-med-la-rosiere1.png"
+        <cardClubResa imagePath="https://www.lechotouristique.com/wp-content/uploads/2021/12/club-med-la-rosiere1.png"
             title="Club Med La Rosière"
             description="A 1950 mètres d''altitude et exposé plein sud, le Resort Club Med habillé de pierres et de bois surplombe toute la vallée de la Tarentaise. Edifié sur les pistes, il domine une station authentique développée avec raison et passion par les habitants de Montvalezan. Le design intérieur de style savoyard nous conte la fabuleuse histoire du col mythique du Petit St-Bernard, de la traversée des Alpes d’Hannibal avec ses éléphants aux pèlerins de passage en haute-montagne, comme en témoigne la fresque de la réception."
             developer="Nintendo" releaseDate="March 3, 2017" />

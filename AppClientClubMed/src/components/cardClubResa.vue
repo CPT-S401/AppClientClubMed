@@ -61,7 +61,7 @@
                         class="mb-1 inline-block text-center text-lg font-bold transition duration-100 hover:text-gray-500 lg:text-xl">
                         Participants
                     </div>
-                    <!-- Pense faire un tableau avec pour chaque colonne, le nommage : nom, prenom, date de naissance -->
+                    <!-- Pense un tableau avec pour chaque colonne, le nommage : nom, prenom, date de naissance -->
                     <p>M. NOM Clément 00/00/0000</p>
                     <p>M. NOM Sam 00/00/0000</p>
                     <p>M. NOM Julien 00/00/0000</p>
