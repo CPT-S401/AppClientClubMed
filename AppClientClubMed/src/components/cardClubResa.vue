@@ -9,12 +9,12 @@
         -->
         <router-link to="/club/1" class="flex flex-wrap gap-x-4 rounded-lg border sm:p-1 lg:gap-6">
             <div class="flex items-center">
-                <a href="#" class="group relative block rounded-lg bg-gray-100 md:w-40 md:h-full max-[765px]:h-48">
+                <a href="#" class="group relative block rounded-lg bg-gray-100 md:w-96 max-[765px]:h-48">
                     <img :src="imagePath" loading="lazy" :alt="'Photo de ' + title"
                         class="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
                 </a>
             </div>
-            <div class="flex flex-1 flex-col justify-between">
+            <div class="flex flex-1 flex-col justify-around">
                 <div class="flex flex-col space-y-2">
                     <div class="inline-flex w-full space-x-3">
                         <div
@@ -30,7 +30,7 @@
                         </div>
                     </div>
 
-                    <span class="block text-gray-500 max-lg:hidden overflow-auto text-ellipsis h-24 leading-6">{{
+                    <span class="block textarea-info max-lg:hidden overflow-auto text-ellipsis h-24 leading-6">{{
                         description }}</span>
 
                     <span class="text-sm">{{ developer }}</span>
@@ -43,16 +43,7 @@
                             <span class="block font-bold md:text-lg line-through">15.00 €</span>
                             <span class="text-red-500 md:text-lg">9.99 €</span>
                         </div>
-
                     </div>
-
-                    <span class="flex items-center gap-1 text-sm text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                        </svg>
-                        En stock
-                    </span>
                 </div>
             </div>
             <div class="flex flex-col">
@@ -67,59 +58,59 @@
                             <table class="table-auto w-full">
                                 <thead class="border-b">
                                     <tr class="">
-                                        <th class="text-left p-2 font-medium">
+                                        <th class="text-center p-2 ">
                                             Nom
                                         </th>
-                                        <th class="text-left p-2 font-medium">
+                                        <th class="text-center p-2 ">
                                             Prénom
                                         </th>
-                                        <th class="text-left p-2 font-medium">
+                                        <th class="text-center p-2 ">
                                             Date de naissance
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="border-b hover:bg-gray-700">
-                                        <td class="p-2">
+                                    <tr class="border-b text-center hover:bg-gray-700">
+                                        <td class="p-2 text-center text-sm">
                                             M. NOM1
                                         </td>
-                                        <td class="p-2">
+                                        <td class="p-2 text-center text-sm">
                                             Clément
                                         </td>
-                                        <td class="p-2">
+                                        <td class="p-2 text-center text-sm">
                                             00/00/0000
                                         </td>
                                     </tr>
-                                    <tr class="border-b hover:bg-gray-700">
+                                    <tr class="border-b text-center text-sm">
                                         <td class="p-2">
                                             M. NOM2
                                         </td>
-                                        <td class="p-2">
+                                        <td class="p-2 text-center text-sm">
                                             Sam
                                         </td>
-                                        <td class="p-2">
+                                        <td class="p-2 text-center text-sm">
                                             00/00/0000
                                         </td>
                                     </tr>
-                                    <tr class="border-b hover:bg-gray-700">
+                                    <tr class="border-b text-center text-sm">
                                         <td class="p-2">
                                             M. NOM3
                                         </td>
-                                        <td class="p-2">
+                                        <td class="p-2 text-center text-sm">
                                             Julien
                                         </td>
-                                        <td class="p-2">
+                                        <td class="p-2 text-center text-sm">
                                             00/00/0000
                                         </td>
                                     </tr>
-                                    <tr class="border-b hover:bg-gray-700">
-                                        <td class="p-2">
+                                    <tr class="border-b text-center text-sm">
+                                        <td class="p-2 text-sm">
                                             M. NOM4
                                         </td>
-                                        <td class="p-2">
+                                        <td class="p-2 text-sm">
                                             Néo
                                         </td>
-                                        <td class="p-2">
+                                        <td class="p-2 text-sm">
                                             00/00/0000
                                         </td>
                                     </tr>
@@ -146,7 +137,7 @@
                     </div>
                     <div class="">
                         <span class="block md:text-lg">Total</span>
-                        <span class="block font-bold md:text-lg">190.00 €</span>
+                        <span class="block font-bold md:text-lg">310.00 €</span>
                     </div>
                 </div>
             </div>

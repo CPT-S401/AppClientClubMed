@@ -83,7 +83,7 @@
                                 </path>
                             </svg>
                         </span>
-                        <span class="ml-2 text-sm tracking-wide truncate">Profile</span>
+                        <span class="ml-2 text-sm tracking-wide truncate">Profil</span>
                     </a>
                 </li>
                 <li>
@@ -99,7 +99,7 @@
                                     d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                             </svg>
                         </span>
-                        <span class="ml-2 text-sm tracking-wide truncate">Settings</span>
+                        <span class="ml-2 text-sm tracking-wide truncate">Paramètres</span>
                     </a>
                 </li>
             </ul>

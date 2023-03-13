@@ -41,6 +41,8 @@
 
 <script>
 export default {
+  created () {
+  },
     data() {
         return {
             // Ajouts des slides
@@ -74,7 +76,7 @@ export default {
         };
     },
 };
-</script >
+</script>
 
 <script setup>
 import SlideItem from './SlideItem.vue'
