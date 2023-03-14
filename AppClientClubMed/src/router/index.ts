@@ -3,6 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import * as Public from './importsEachLayer/publicImports.js'
 import * as Auth from './importsEachLayer/authImports.js'
 import * as Admin from './importsEachLayer/adminImports.js'
+import * as Login from '@/views/auth/Login.vue'
+import * as Signin from '@/views/auth/CreateAccount.vue'
 
 
 import NotFoundPage from '@/views/errors/404NotFoundView.vue'
@@ -40,6 +42,16 @@ const router = createRouter({
       children: [
         { path: 'dashboard', name: 'adminDashboard' , component: Admin.DashboardView}, //  meta: { requiresAuth: true } pour protéger la route
       ]
+    },
+    {
+      path: '/signin',
+      name: 'signin',
+      component: Signin,
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login,
     },
     {
       // redirect à la page NotFound si pas de route
