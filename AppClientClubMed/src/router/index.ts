@@ -3,8 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import * as Public from './importsEachLayer/publicImports.js'
 import * as Auth from './importsEachLayer/authImports.js'
 import * as Admin from './importsEachLayer/adminImports.js'
-import * as Login from '@/views/auth/Login.vue'
-import * as Signin from '@/views/auth/CreateAccount.vue'
+import Login from '@/views/auth/Login.vue'
+import Signin from '@/views/auth/CreateAccount.vue'
 
 
 import NotFoundPage from '@/views/errors/404NotFoundView.vue'
