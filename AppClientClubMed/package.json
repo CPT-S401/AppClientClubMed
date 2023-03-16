@@ -18,7 +18,6 @@
     "@headlessui/vue": "^1.7.12",
     "@heroicons/vue": "^2.0.16",
     "daisyui": "^2.51.3",
-    "flowbite": "^1.6.3",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },
