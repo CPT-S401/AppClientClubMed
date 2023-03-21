@@ -1,56 +1,48 @@
 <template>
-  <div class="relative rounded-lg overflow-hidden shadow-md">
-    <img
-      class="w-full h-auto"
-      src="https://via.placeholder.com/800x400"
-      alt="Card image"
-    />
-    <div class="absolute bottom-0 left-0 w-full">
-      <div
-        class="bg-black bg-opacity-50 py-2 px-4 transition duration-500 transform hover:-translate-y-full"
-      >
-        <h2 class="text-white text-lg font-bold">Titre de la carte</h2>
-      </div>
-      <div
-        class="hidden absolute bottom-0 left-0 w-full h-full bg-black bg-opacity-50 justify-center items-center"
-      >
-        <h2 class="text-white text-lg font-bold">Nouveau titre</h2>
-        <p class="text-white">Texte supplémentaire</p>
+  <div class="relative rounded-lg overflow-hidden shadow-md" @mouseenter="showInfo = true" @mouseleave="showInfo = false">
+    <img class="w-full h-auto" :src="imgSrc" alt="Card image"/>
+    <div class="absolute bottom-0 left-0 right-0 transition-all duration-500 transform" :class="{'translate-y-full': !showInfo}">
+      <div class="bg-black bg-opacity-50 py-2 px-4">
+        <h2 class="text-white text-lg font-bold">{{ title }}</h2>
+        <p class="text-white font-bold" :class="{'opacity-0': !showInfo, 'opacity-100': showInfo}">{{ description }}</p>
+        <p class="text-white font-bold" :class="{'opacity-0': !showInfo, 'opacity-100': showInfo}">{{ typeActivite }}</p>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default{
-    name: 'ClubShow',
-    mounted(){
-        console.log('ClubShow mounted id : ' + this.$route.params.id);
-    },
-    props: {
-        title: {
-            type: String,
-            required: true
-        },
-        description: {
-            type: String,
-            required: true
-        },
-        imgSrc:{
-            type: String,
-            required: true
-        }
-        typeActivite: {
-            type: String,
-            required: true
-        }
-    }
-}
+<style>
+  .transform {
+    transition: transform 0.5s ease-in-out;
+  }
+</style>
 
-const cards = document.querySelectorAll('.card');
-cards.forEach(card => {
-  card.addEventListener('click', () => {
-    card.querySelector('.bg-black').classList.toggle('hidden');
-  });
-});
+
+<script>
+export default {
+  name: 'CardActivity',
+  props: {
+    title: {
+      type: String,
+      required: true
+    },
+    description: {
+      type: String,
+      required: true
+    },
+    imgSrc: {
+      type: String,
+      required: true
+    },
+    typeActivite: {
+      type: String,
+      required: true
+    }
+  },
+  data() {
+    return {
+      showInfo: false
+    }
+  }
+};
 </script>
