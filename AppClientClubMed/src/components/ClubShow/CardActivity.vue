@@ -1,22 +1,29 @@
 <template>
-  <div class="relative rounded-lg overflow-hidden shadow-md" @mouseenter="showInfo = true" @mouseleave="showInfo = false">
-    <img class="w-full h-auto" :src="imgSrc" alt="Card image"/>
-    <div class="absolute bottom-0 left-0 right-0 transition-all duration-500 transform" :class="{'translate-y-full': !showInfo}">
-      <div class="bg-black bg-opacity-50 py-2 px-4">
-        <h2 class="text-white text-lg font-bold">{{ title }}</h2>
-        <p class="text-white font-bold" :class="{'opacity-0': !showInfo, 'opacity-100': showInfo}">{{ description }}</p>
-        <p class="text-white font-bold" :class="{'opacity-0': !showInfo, 'opacity-100': showInfo}">{{ typeActivite }}</p>
-      </div>
+  <div class="relative rounded-lg overflow-hidden shadow-md">
+    <div class="absolute top-0 left-0 right-0">
+      <img class="w-full h-auto" :src="imgSrc" alt="Card image" @mouseenter="showInfo = true" @mouseleave="showInfo = false">
+    </div>
+    <div class="card-activity bg-black bg-opacity-50 py-2 px-4" :class="{ 'show': showInfo }">
+      <div class="text-white text-lg font-bold mb-2">{{ title }}</div>
+      <p class="text-white font-bold mt-2" v-show="showInfo">{{ description }}</p>
     </div>
   </div>
 </template>
 
 <style>
-  .transform {
+  .card-activity {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     transition: transform 0.5s ease-in-out;
+    transform: translateY(100%);
+  }
+  
+  .card-activity.show {
+    transform: translateY(0%);
   }
 </style>
-
 
 <script>
 export default {
@@ -31,10 +38,6 @@ export default {
       required: true
     },
     imgSrc: {
-      type: String,
-      required: true
-    },
-    typeActivite: {
       type: String,
       required: true
     }
