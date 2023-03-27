@@ -19,7 +19,7 @@ class ControllerManager {
     }
 
     GetById(id) {
-        return axios.get(`${ControllerManager.baseURL}/${this.name}/ById/${id}`);
+        return axios.get(`${ControllerManager.baseURL}/${this.name}/GetById/${id}`);
     }
 
     Post(data) {
