@@ -8,7 +8,7 @@ class ClubController extends ControllerManager {
     }
 
     GetByName(name) {
-        return axios.get(`${ControllerManager.baseURL}/${this.name}/ByName/${name}`);
+        return axios.get(`${ControllerManager.baseURL}/${this.name}/GetByName/${name}`);
     }
 }
 

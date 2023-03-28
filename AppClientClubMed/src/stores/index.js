@@ -4,7 +4,8 @@ import { defineStore } from 'pinia';
 const controllers = defineStore( 'controllers', () => {
     const ClubController = api.ClubController;
     const ClientController = api.ClientController;
-    return { ClubController, ClientController };
+    const ActivitiesController = api.ActivitiesController;
+    return { ClubController, ClientController, ActivitiesController };
 });
 
 export { controllers };
