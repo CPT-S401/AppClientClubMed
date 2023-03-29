@@ -1,29 +1,23 @@
 <template>
-  <div class="relative rounded-lg overflow-hidden shadow-md">
-    <div class="absolute top-0 left-0 right-0">
-      <img class="w-full h-auto" :src="imgSrc" alt="Card image" @mouseenter="showInfo = true" @mouseleave="showInfo = false">
-    </div>
-    <div class="card-activity bg-black bg-opacity-50 py-2 px-4" :class="{ 'show': showInfo }">
-      <div class="text-white text-lg font-bold mb-2">{{ title }}</div>
-      <p class="text-white font-bold mt-2" v-show="showInfo">{{ description }}</p>
+  <div class="flex items-center justify-center bg-gray-100 h-full">
+    <div class="max-w-md rounded overflow-hidden shadow-lg h-full flex flex-col">
+      <img :src="imgSrc" alt="Card image" class="w-full h-full object-cover">
+      <div class="px-6 py-4 flex-1">
+        <div class="font-bold text-xl mb-2">{{ title }}</div>
+        <p class="text-gray-700 text-base">{{ description }}</p>
+      </div>
+      <div class="px-6 pt-4 pb-2">
+        <button @click="showInfo = !showInfo"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          {{ showInfo ? 'Masquer' : 'Afficher' }} les détails
+        </button>
+      </div>
+      <div v-show="showInfo" class="px-6 py-4">
+        <p class="text-gray-700 text-base">Détails de l'activité...</p>
+      </div>
     </div>
   </div>
 </template>
-
-<style>
-  .card-activity {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    transition: transform 0.5s ease-in-out;
-    transform: translateY(100%);
-  }
-  
-  .card-activity.show {
-    transform: translateY(0%);
-  }
-</style>
 
 <script>
 export default {
