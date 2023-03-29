@@ -12,7 +12,16 @@
                 <p class="text-gray-100 mb-4"><span class="font-bold">Email:</span> {{ club.email }}</p>
             </div>
         </div>
+        <div class="m-6 p-6 rounded-lg border-2 border-primary-blue">
+            <h1 class="text-3xl text-primary-blue font-bold mb-4 ml-4">Les bars :</h1>
 
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div v-for="bar in bars" :key="bar.id" class="h-full">
+                    <CardBar :nom="bar.nom" :description="bar.description" :imgSrc="bar.imgSrc"
+                        class="flex flex-col h-full" />
+                </div>
+            </div>
+        </div>
         <div class="m-6 p-6 rounded-lg border-2 border-primary-blue">
             <h1 class="text-3xl text-primary-blue font-bold mb-4 ml-4">Les activités :</h1>
 
@@ -29,6 +38,7 @@
 <script setup lang="ts">
 import Carousel from '@/components/Carousel/Carousel.vue'
 import CardActivity from '@/components/ClubShow/CardActivity.vue'
+import CardBar from '@/components/ClubShow/CardBar.vue'
 
 import { onMounted, ref, reactive } from 'vue'
 import { controllers } from '@/stores';
@@ -38,11 +48,13 @@ const id = window.location.pathname.split('/').pop()
 const clubActivities = ref([])
 var club = reactive({})
 var activities = reactive([])
+var bars = reactive([])
 
 onMounted(async () => {
     try {
         const response = await controllers().ClubController.GetById(id);
         const responseActivities = await controllers().ActivitiesController.GetActivitiesByClub(id);
+        const responseBars = await controllers().BarsController.GetBarsByClub(id);
 
         activities = responseActivities.data.map(activity => {
             return {
@@ -56,14 +68,23 @@ onMounted(async () => {
             };
         });
 
+        bars = responseBars.data.map(bar => {
+            return {
+                id: bar.id,
+                nom: bar.nom,
+                description: bar.description,
+                imgSrc: "https://preview.redd.it/nhk8jg3psng71.jpg?auto=webp&s=0614423637af7440921c3932759d8a90a24981fb"
+            }
+        })
+
+        console.log(bars)
+
         clubActivities.value = response.data.clubActivities;
         club.nom = response.data.nom;
         club.description = response.data.description;
         club.latitude = response.data.latitude;
         club.longitude = response.data.longitude;
         club.email = response.data.email;
-
-        console.log(activities);
 
     } catch (error) {
         console.log(error);

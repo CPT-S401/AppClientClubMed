@@ -5,7 +5,8 @@ const controllers = defineStore( 'controllers', () => {
     const ClubController = api.ClubController;
     const ClientController = api.ClientController;
     const ActivitiesController = api.ActivitiesController;
-    return { ClubController, ClientController, ActivitiesController };
+    const BarsController = api.BarsController;
+    return { ClubController, ClientController, ActivitiesController, BarsController };
 });
 
 export { controllers };
