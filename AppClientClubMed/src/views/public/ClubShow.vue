@@ -1,5 +1,5 @@
 <template>
-    <div bg-white>
+    <div class="bg-white">
         <Carousel />
         <div class="bg-white flex justify-center">
             <div class="bg-primary-blue max-w-4xl w-full h-full mt-8 mb-8 p-8 rounded-lg shadow-2xl">
@@ -12,10 +12,15 @@
                 <p class="text-gray-100 mb-4"><span class="font-bold">Email:</span> {{ club.email }}</p>
             </div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <div v-for="activity in activities" :key="activity.id" class="h-full">
-                <CardActivity :title="activity.nom" :description="activity.description" :imgSrc="activity.imgSrc"
-                    class="flex flex-col h-full" />
+
+        <div class="m-6 p-6 rounded-lg border-2 border-primary-blue">
+            <h1 class="text-3xl text-primary-blue font-bold mb-4 ml-4">Les activités :</h1>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div v-for="activity in activities" :key="activity.id" class="h-full">
+                    <CardActivity :title="activity.nom" :description="activity.description" :imgSrc="activity.imgSrc"
+                        class="flex flex-col h-full" />
+                </div>
             </div>
         </div>
     </div>
