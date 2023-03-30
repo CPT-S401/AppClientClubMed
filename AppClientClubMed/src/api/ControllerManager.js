@@ -22,6 +22,10 @@ class ControllerManager {
         return axios.get(`${ControllerManager.baseURL}/${this.name}/GetById/${id}`);
     }
 
+    GetByClub(id) {
+        return axios.get(`${ControllerManager.baseURL}/${this.name}/Get${this.name}ByClub/${id}`);
+    }
+
     Post(data) {
         return axios.post(`${ControllerManager.baseURL}/${this.name}`, data);
     }

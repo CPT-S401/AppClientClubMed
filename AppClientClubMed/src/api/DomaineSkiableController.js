@@ -1,7 +1,7 @@
 import axios from "axios";
 import ControllerManager from "./ControllerManager";
 
-class ActivitiesController extends ControllerManager {
+class DomaineSkiableController extends ControllerManager {
     constructor() {
         super();
         this.name = "Activites";
@@ -10,10 +10,6 @@ class ActivitiesController extends ControllerManager {
     GetByName(name) {
         return axios.get(`${ControllerManager.baseURL}/${this.name}/GetByName/${name}`);
     }
-
-    GetActivitiesByClub(id){
-        return axios.get(`${ControllerManager.baseURL}/${this.name}/getactivitiesbyclub/${id}`);
-    }
 }
 
-export default new ActivitiesController();
+export default new DomaineSkiableController();

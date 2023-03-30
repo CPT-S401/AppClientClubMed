@@ -12,7 +12,25 @@
                 <p class="text-gray-100 mb-4"><span class="font-bold">Email:</span> {{ club.email }}</p>
             </div>
         </div>
-        <div class="m-6 p-6 rounded-lg border-2 border-primary-blue">
+        <div v-if="domaineskiable != null">
+            <div class="bg-white flex justify-center">
+                <div class="bg-primary-blue max-w-4xl w-full h-full mt-8 mb-8 p-8 rounded-lg shadow-2xl">
+                    <h1 class="text-3xl text-white font-bold mb-4">{{ domaineskiable.nomStation }}</h1>
+                    <p class="text-gray-100 mb-4">{{ domaineskiable.description }}</p>
+                    <div class="flex justify-between mb-4">
+                        <p class="text-gray-100"><span class="font-bold">Altitude basse:</span> {{
+                            domaineskiable.altitudeBasse }}</p>
+                        <p class="text-gray-100"><span class="font-bold">Altitude haute:</span> {{
+                            domaineskiable.altitudeHaute }}</p>
+                    </div>
+                    <p class="text-gray-100 mb-4"><span class="font-bold">Longueur des pistes:</span> {{
+                        domaineskiable.longeurPistes }} km</p>
+                    <p class="text-gray-100 mb-4"><span class="font-bold">Nombre de pistes:</span> {{
+                        domaineskiable.nbPistes }}</p>
+                </div>
+            </div>
+        </div>
+        <div v-if="bars.length > 0" class="m-6 p-6 rounded-lg border-2 border-primary-blue">
             <h1 class="text-3xl text-primary-blue font-bold mb-4 ml-4">Les bars :</h1>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -22,7 +40,7 @@
                 </div>
             </div>
         </div>
-        <div class="m-6 p-6 rounded-lg border-2 border-primary-blue">
+        <div v-if="activities.length > 0" class="m-6 p-6 rounded-lg border-2 border-primary-blue">
             <h1 class="text-3xl text-primary-blue font-bold mb-4 ml-4">Les activités :</h1>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -47,14 +65,16 @@ const id = window.location.pathname.split('/').pop()
 
 const clubActivities = ref([])
 var club = reactive({})
+var domaineskiable = reactive({})
 var activities = reactive([])
 var bars = reactive([])
 
 onMounted(async () => {
     try {
         const response = await controllers().ClubController.GetById(id);
-        const responseActivities = await controllers().ActivitiesController.GetActivitiesByClub(id);
-        const responseBars = await controllers().BarsController.GetBarsByClub(id);
+        const responseActivities = await controllers().ActivitesController.GetByClub(id);
+        const responseBars = await controllers().BarsController.GetByClub(id);
+        const reponseDomaineSkiable = await controllers().DomaineSkiableController.GetByClub(id);
 
         activities = responseActivities.data.map(activity => {
             return {
@@ -77,14 +97,19 @@ onMounted(async () => {
             }
         })
 
-        console.log(bars)
-
-        clubActivities.value = response.data.clubActivities;
         club.nom = response.data.nom;
         club.description = response.data.description;
         club.latitude = response.data.latitude;
         club.longitude = response.data.longitude;
         club.email = response.data.email;
+
+        domaineskiable.nomStation = responseDomaineSkiable.data.nom;
+        domaineskiable.description = responseDomaineSkiable.data.description;
+        domaineskiable.altitudeBasse = responseDomaineSkiable.data.altitudeBasse;
+        domaineskiable.altitudeHaute = responseDomaineSkiable.data.altitudeHaute;
+        domaineskiable.longeurPistes = responseDomaineSkiable.data.longeurPistes;
+        domaineskiable.nbPistes = responseDomaineSkiable.data.nbPistes;
+        domaineskiable.infoSki = responseDomaineSkiable.data.infoSki;
 
     } catch (error) {
         console.log(error);
