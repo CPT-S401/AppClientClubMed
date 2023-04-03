@@ -4,7 +4,7 @@ import ControllerManager from "./ControllerManager";
 class DomaineSkiableController extends ControllerManager {
     constructor() {
         super();
-        this.name = "Activites";
+        this.name = "DomaineSkiable";
     }
 
     GetByName(name) {
