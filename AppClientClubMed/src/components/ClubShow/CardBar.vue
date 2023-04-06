@@ -6,24 +6,15 @@
         <div class="font-bold text-xl mb-2">{{ title }}</div>
         <p class="text-gray-700 text-base">{{ description }}</p>
       </div>
-      <div class="px-6 pt-4 pb-2">
-        <button @click="showInfo = !showInfo"
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          {{ showInfo ? 'Masquer' : 'Afficher' }} les détails
-        </button>
-      </div>
-      <div v-show="showInfo" class="px-6 py-4">
-        <p class="text-gray-700 text-base">Détails de l'activité...</p>
-      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'BarActivity',
+  name: 'CarBar',
   props: {
-    nom: {
+    title: {
       type: String,
       required: true
     },

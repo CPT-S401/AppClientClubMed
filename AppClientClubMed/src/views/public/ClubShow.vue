@@ -51,7 +51,7 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 <div v-for="restaurant in restaurants" :key="restaurant.id" class="h-full">
-                    <CardBar :nom="restaurant.nom" :description="restaurant.description" :imgSrc="restaurant.imgSrc"
+                    <CardResto :nom="restaurant.nom" :description="restaurant.description" :imgSrc="restaurant.imgSrc"
                         class="flex flex-col h-full" />
                 </div>
             </div>
@@ -71,7 +71,7 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 <div v-for="activity in activities" :key="activity.id" class="h-full">
-                    <CardActivity :title="activity.nom" :description="activity.description" :imgSrc="activity.imgSrc"
+                    <CardActivity :title="activity.nom" :description="activity.description" :imgSrc="activity.imgSrc" :price="activity.prix"
                         class="flex flex-col h-full" />
                 </div>
             </div>
@@ -83,6 +83,7 @@
 import Carousel from '@/components/Carousel/Carousel.vue'
 import CardActivity from '@/components/ClubShow/CardActivity.vue'
 import CardBar from '@/components/ClubShow/CardBar.vue'
+import CardResto from '@/components/ClubShow/CarResto.vue'
 
 import { onMounted, ref, reactive } from 'vue'
 import { controllers } from '@/stores';

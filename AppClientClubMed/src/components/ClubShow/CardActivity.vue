@@ -7,13 +7,9 @@
         <p class="text-gray-700 text-base">{{ description }}</p>
       </div>
       <div class="px-6 pt-4 pb-2">
-        <button @click="showInfo = !showInfo"
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          {{ showInfo ? 'Masquer' : 'Afficher' }} les détails
-        </button>
-      </div>
-      <div v-show="showInfo" class="px-6 py-4">
-        <p class="text-gray-700 text-base">Détails de l'activité...</p>
+        <p class="text-gray-700 text-lg font-bold">
+          {{ price ? price + " €" : "Activité incluse" }}
+        </p>
       </div>
     </div>
   </div>
@@ -32,6 +28,10 @@ export default {
       required: true
     },
     imgSrc: {
+      type: String,
+      required: true
+    },
+    price: {
       type: String,
       required: true
     }
