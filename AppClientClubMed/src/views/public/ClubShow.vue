@@ -51,7 +51,7 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 <div v-for="restaurant in restaurants" :key="restaurant.id" class="h-full">
-                    <CardResto :nom="restaurant.nom" :description="restaurant.description" :imgSrc="restaurant.imgSrc"
+                    <CardResto :title="restaurant.nom" :description="restaurant.description" :imgSrc="restaurant.imgSrc"
                         class="flex flex-col h-full" />
                 </div>
             </div>
@@ -61,7 +61,7 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 <div v-for="bar in bars" :key="bar.id" class="h-full">
-                    <CardBar :nom="bar.nom" :description="bar.description" :imgSrc="bar.imgSrc"
+                    <CardBar :title="bar.nom" :description="bar.description" :imgSrc="bar.imgSrc"
                         class="flex flex-col h-full" />
                 </div>
             </div>
@@ -71,7 +71,7 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 <div v-for="activity in activities" :key="activity.id" class="h-full">
-                    <CardActivity :title="activity.nom" :description="activity.description" :imgSrc="activity.imgSrc" :price="activity.prix"
+                    <CardActivity :title="activity.nom" :description="activity.description" :price="activity.prix"
                         class="flex flex-col h-full" />
                 </div>
             </div>
@@ -112,8 +112,7 @@ onMounted(async () => {
                 description: activity.description,
                 duree: activity.duree,
                 ageMin: activity.ageMin,
-                prix: activity.prix,
-                imgSrc: "https://preview.redd.it/nhk8jg3psng71.jpg?auto=webp&s=0614423637af7440921c3932759d8a90a24981fb"
+                prix: activity.prix
             };
         });
 
@@ -140,6 +139,8 @@ onMounted(async () => {
         club.latitude = response.data[0].latitude;
         club.longitude = response.data[0].longitude;
         club.email = response.data[0].email;
+
+        console.log(bars)
 
         images = response.data[0].multimedia.map(image => {
             return {
