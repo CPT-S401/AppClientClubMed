@@ -1,6 +1,12 @@
 <template>
     <div class="bg-white">
-        <Carousel />
+        <div class="container mx-auto">
+            <div class="py-8">
+                <div class="max-w-5xl mx-auto h-full">
+                    <Carousel :images="images" />
+                </div>
+            </div>
+        </div>
         <div class="bg-white flex justify-center">
             <div class="bg-primary-blue max-w-4xl w-full h-full mt-8 mb-8 p-8 rounded-lg shadow-2xl">
                 <h1 class="text-3xl text-white font-bold mb-4">{{ club.nom }}</h1>
@@ -133,6 +139,12 @@ onMounted(async () => {
         club.latitude = response.data[0].latitude;
         club.longitude = response.data[0].longitude;
         club.email = response.data[0].email;
+
+        images = response.data[0].multimedia.map(image => {
+            return {
+                img: image.lien
+            }
+        })
 
         domaineskiable.nomStation = response.data[0].domaineSkiable.nom;
         domaineskiable.description = response.data[0].domaineSkiable.description;
