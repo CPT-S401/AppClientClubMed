@@ -4,6 +4,7 @@ import ActivitesController from "./ActivitesController.js";
 import BarsController from "./BarsController.js";
 import CaracteristiquesController from "./CaracteristiquesController.js";
 import DomaineSkiableController from "./DomaineSkiableController.js";
+import RestaurantsController from "./RestaurantsController.js";
 
 const api = {
     ClientController,
@@ -11,7 +12,8 @@ const api = {
     ActivitesController,
     BarsController,
     CaracteristiquesController,
-    DomaineSkiableController
+    DomaineSkiableController,
+    RestaurantsController
 }
 
 export default api;

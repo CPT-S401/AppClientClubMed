@@ -8,7 +8,8 @@ const controllers = defineStore( 'controllers', () => {
     const BarsController = api.BarsController;
     const CaracteristiquesController = api.CaracteristiquesController;
     const DomaineSkiableController = api.DomaineSkiableController;
-    return { ClubController, ClientController, ActivitesController, BarsController, CaracteristiquesController, DomaineSkiableController };
+    const RestaurantsController = api.RestaurantsController;
+    return { ClubController, ClientController, ActivitesController, BarsController, CaracteristiquesController, DomaineSkiableController, RestaurantsController };
 });
 
 export { controllers };
