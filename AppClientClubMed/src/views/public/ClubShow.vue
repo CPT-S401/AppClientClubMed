@@ -15,10 +15,6 @@
                 <p class="text-gray-100 mb-4">{{ club.description }}</p>
                 <hr>
                 <br>
-                <div class="flex justify-between mb-4">
-                    <p class="text-gray-100"><span class="font-bold">Latitude:</span> {{ club.latitude }}</p>
-                    <p class="text-gray-100"><span class="font-bold">Longitude:</span> {{ club.longitude }}</p>
-                </div>
                 <p class="text-gray-100 mb-4"><span class="font-bold">Email:</span> {{ club.email }}</p>
             </div>
         </div>
@@ -76,6 +72,11 @@
                 </div>
             </div>
         </div>
+        <div class="m-6 p-6 rounded-lg border-2 border-primary-blue">
+            <h1 class="text-3xl text-primary-blue font-bold mb-4 ml-4">La Carte :</h1>
+
+            <Map :latitude="club.latitude" :longitude="club.longitude"></Map>
+        </div>
     </div>
 </template>
 
@@ -84,6 +85,7 @@ import Carousel from '@/components/Carousel/Carousel.vue'
 import CardActivity from '@/components/ClubShow/CardActivity.vue'
 import CardBar from '@/components/ClubShow/CardBar.vue'
 import CardResto from '@/components/ClubShow/CarResto.vue'
+import Map from '@/components/ClubShow/Map.vue'
 
 import { onMounted, ref, reactive } from 'vue'
 import { controllers } from '@/stores';
@@ -101,6 +103,7 @@ var images = reactive([])
 onMounted(async () => {
     try {
         const response = await controllers().ClubController.GetById(id);
+        console.log(response)
         const responseActivities = await controllers().ActivitesController.GetByClub(id);
         const responseBars = await controllers().BarsController.GetByClub(id);
         const responseRestaurants = await controllers().RestaurantsController.GetByClub(id);
@@ -139,8 +142,6 @@ onMounted(async () => {
         club.latitude = response.data[0].latitude;
         club.longitude = response.data[0].longitude;
         club.email = response.data[0].email;
-
-        console.log(bars)
 
         images = response.data[0].multimedia.map(image => {
             return {
