@@ -109,10 +109,13 @@ onMounted(async () => {
     try {
         const response = await controllers().ClubController.GetById(id);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
         console.log(response)
 >>>>>>> merge-alain-clem
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
         const responseActivities = await controllers().ActivitesController.GetByClub(id);

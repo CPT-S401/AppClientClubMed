@@ -34,7 +34,11 @@ export default {
 <template>
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <div class="border-black w-min">
+=======
+    <router-link :to="'club/'+idClub" class="border-black w-min">
+>>>>>>> Stashed changes
 =======
     <router-link :to="'club/'+idClub" class="border-black w-min">
 >>>>>>> Stashed changes
@@ -49,6 +53,7 @@ export default {
                 </a>
             </div>
         </div>
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     </div>
 <<<<<<< HEAD
@@ -70,6 +75,9 @@ export default {
 >>>>>>> Stashed changes
 =======
 >>>>>>> merge-alain-clem
+=======
+    </router-link>
+>>>>>>> Stashed changes
 =======
     </router-link>
 >>>>>>> Stashed changes

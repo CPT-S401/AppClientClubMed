@@ -21,6 +21,7 @@ onMounted(async () => {
     //             });
     //     });
     // });
+<<<<<<< Updated upstream
 =======
 let clubs = ref([])
 let pays = ref([])
@@ -39,10 +40,13 @@ onMounted(async () => {
     //     });
     // });
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     controllers().ClubController.GetAll()
         .then((response) => {
             response.data.forEach(club => {
                 clubs.value.push({
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< HEAD
                     id: club.id,
@@ -56,6 +60,13 @@ onMounted(async () => {
                     lien: club.multimedia[0],
                     pays: club.pays
 >>>>>>> merge-alain-clem
+=======
+                    id: club.id,
+                    name: club.nomClub,
+                    description: club.description,
+                    lien: club.lienMultimedia,
+                    nompays: club.nomPays
+>>>>>>> Stashed changes
 =======
                     id: club.id,
                     name: club.nomClub,
@@ -93,6 +104,7 @@ onMounted(async () => {
         </template>
         <template #objectDisplay>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <<<<<<< Updated upstream
             <Card imagePath="https://a.travel-assets.com/findyours-php/viewfinder/images/res40/109000/109366.jpg" pays="France" nom-resort="Rosière" description-resort="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Venam, labore..." :price="150"/>
@@ -122,6 +134,10 @@ onMounted(async () => {
 =======
         </template>
     </BlockSectionItem>
+=======
+        </template>
+    </BlockSectionItem>
+>>>>>>> Stashed changes
     <div class="bg-white pb-3">
         <h1 class="text-2xl text-primary-blue font-bold">Tous les Club </h1>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4" style="justify-items: center;">
@@ -129,6 +145,9 @@ onMounted(async () => {
                 :description-resort="club.description" :price="3710" />
         </div>
     </div>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 </template>
  
