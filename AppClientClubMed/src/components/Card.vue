@@ -24,11 +24,8 @@ export default {
         price: {
             type: Number,
             required: true
-        },
-        id: {
-            type: Number,
-            required: true
         }
+
     }
 }
 
@@ -36,9 +33,13 @@ export default {
 
 <template>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <div class="border-black w-min">
+=======
+    <router-link :to="'club/'+idClub" class="border-black w-min">
+>>>>>>> Stashed changes
         <span class="badge border-none text-white text-[1.05rem] bg-primary-blue float-right">{{ price }} €/pers.</span>
-        <div class="card-box w-[15vw] h-[20vh]">
+        <div class="card-box w-[25vw] h-[30vh]">
             <img :src="imagePath" alt="" class="object-cover w-full h-full">
             <div class="card-layer text-white">
                 <a href="#">
@@ -48,6 +49,7 @@ export default {
                 </a>
             </div>
         </div>
+<<<<<<< Updated upstream
     </div>
 <<<<<<< HEAD
     </div>
@@ -68,6 +70,9 @@ export default {
 >>>>>>> Stashed changes
 =======
 >>>>>>> merge-alain-clem
+=======
+    </router-link>
+>>>>>>> Stashed changes
 </template>
 
 <style>

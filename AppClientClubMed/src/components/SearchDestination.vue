@@ -23,12 +23,27 @@ onMounted(async () => {
     // });
 =======
 let clubs = ref([])
+let pays = ref([])
+
 onMounted(async () => {
+<<<<<<< Updated upstream
 >>>>>>> merge-alain-clem
+=======
+    // controllers().PaysController.GetAll()
+    //     .then((response) => {
+    //         response.data.forEach(pays => {
+    //             pays.value.push({
+    //                 id: pays.id,
+    //                 nom: pays.nom
+    //             });
+    //     });
+    // });
+>>>>>>> Stashed changes
     controllers().ClubController.GetAll()
         .then((response) => {
             response.data.forEach(club => {
                 clubs.value.push({
+<<<<<<< Updated upstream
 <<<<<<< HEAD
                     id: club.id,
                     name: club.nomClub,
@@ -41,6 +56,13 @@ onMounted(async () => {
                     lien: club.multimedia[0],
                     pays: club.pays
 >>>>>>> merge-alain-clem
+=======
+                    id: club.id,
+                    name: club.nomClub,
+                    description: club.description,
+                    lien: club.lienMultimedia,
+                    nompays: club.nomPays
+>>>>>>> Stashed changes
                 });
             });
         })
@@ -70,6 +92,7 @@ onMounted(async () => {
             </div>
         </template>
         <template #objectDisplay>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <<<<<<< Updated upstream
             <Card imagePath="https://a.travel-assets.com/findyours-php/viewfinder/images/res40/109000/109366.jpg" pays="France" nom-resort="Rosière" description-resort="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Venam, labore..." :price="150"/>
@@ -96,6 +119,17 @@ onMounted(async () => {
         </template>
     </BlockSectionItem>
 >>>>>>> merge-alain-clem
+=======
+        </template>
+    </BlockSectionItem>
+    <div class="bg-white pb-3">
+        <h1 class="text-2xl text-primary-blue font-bold">Tous les Club </h1>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4" style="justify-items: center;">
+            <Card v-for="club in clubs" :idClub="club.id" :imagePath="club.lien" :pays="club.nompays" :nom-resort="club.name"
+                :description-resort="club.description" :price="3710" />
+        </div>
+    </div>
+>>>>>>> Stashed changes
 </template>
  
 <style>

@@ -108,10 +108,13 @@ var images = reactive([])
 onMounted(async () => {
     try {
         const response = await controllers().ClubController.GetById(id);
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
         console.log(response)
 >>>>>>> merge-alain-clem
+=======
+>>>>>>> Stashed changes
         const responseActivities = await controllers().ActivitesController.GetByClub(id);
         const responseBars = await controllers().BarsController.GetByClub(id);
         const responseRestaurants = await controllers().RestaurantsController.GetByClub(id);

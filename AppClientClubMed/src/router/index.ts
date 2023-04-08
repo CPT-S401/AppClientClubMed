@@ -4,6 +4,7 @@ import { authStore } from '../stores/authStore.js';
 import * as Public from './importsEachLayer/publicImports.js'
 import * as Auth from './importsEachLayer/authImports.js'
 import * as Admin from './importsEachLayer/adminImports.js'
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
@@ -11,6 +12,8 @@ import Login from '@/views/auth/Login.vue'
 import Signin from '@/views/auth/CreateAccount.vue'
 >>>>>>> merge-alain-clem
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 
@@ -60,6 +63,7 @@ const router = createRouter({
       ]
     },
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
     { path: '/login', name: 'login', component: Auth.LoginView },
     { path: '/register', name: 'register', component: Auth.CreateAccountView },
@@ -74,6 +78,10 @@ const router = createRouter({
       name: 'login',
       component: Login,
     },
+=======
+    { path: '/login', name: 'login', component: Auth.LoginView },
+    { path: '/register', name: 'register', component: Auth.CreateAccountView },
+>>>>>>> Stashed changes
     {
       // redirect à la page NotFound si pas de route
       path: '/:pathMatch(.*)*', name: 'notFound', component: NotFoundPage
