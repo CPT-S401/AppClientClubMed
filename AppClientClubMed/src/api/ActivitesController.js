@@ -1,10 +1,10 @@
 import axios from "axios";
 import ControllerManager from "./ControllerManager";
 
-class ClubController extends ControllerManager {
+class ActivitesController extends ControllerManager {
     constructor() {
         super();
-        this.name = "clubs";
+        this.name = "Activites";
     }
 
     GetByName(name) {
@@ -12,4 +12,4 @@ class ClubController extends ControllerManager {
     }
 }
 
-export default new ClubController();
+export default new ActivitesController();

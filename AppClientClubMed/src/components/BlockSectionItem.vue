@@ -11,7 +11,6 @@ import iconPlus from './icons/iconPlus.vue';
         </div>
         <div class="flex gap-10 pb-5" >
             <slot name="objectDisplay"></slot>
-            <iconPlus class="w-20 text-primary-blue"/>
         </div>
   </div>
 </template>
