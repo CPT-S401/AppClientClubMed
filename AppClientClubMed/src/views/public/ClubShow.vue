@@ -82,11 +82,6 @@
 
 <script setup lang="ts">
 import Carousel from '@/components/Carousel/Carousel.vue'
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> merge-alain-clem
 import CardActivity from '@/components/ClubShow/CardActivity.vue'
 import CardBar from '@/components/ClubShow/CardBar.vue'
 import CardResto from '@/components/ClubShow/CarResto.vue'
@@ -108,16 +103,6 @@ var images = reactive([])
 onMounted(async () => {
     try {
         const response = await controllers().ClubController.GetById(id);
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
-        console.log(response)
->>>>>>> merge-alain-clem
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
         const responseActivities = await controllers().ActivitesController.GetByClub(id);
         const responseBars = await controllers().BarsController.GetByClub(id);
         const responseRestaurants = await controllers().RestaurantsController.GetByClub(id);
@@ -175,8 +160,4 @@ onMounted(async () => {
         console.log(error);
     }
 });
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> merge-alain-clem
 </script>

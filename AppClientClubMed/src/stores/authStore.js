@@ -34,7 +34,6 @@ export const authStore = defineStore("authStore", () => {
 	// Usage
 	async function myFunction() {
 		const code = await getCodePostalById(user.idCodePostal);
-		console.log(code);
 	}
 	
 
@@ -58,7 +57,6 @@ export const authStore = defineStore("authStore", () => {
 				user.value.logged = true;
 				user.value.error = null;
 				user.value.token = response.data.token;
-				console.log(response.body);
 				saveTokenToSession();
 
 				route.push("/user/dashboard");

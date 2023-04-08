@@ -32,33 +32,6 @@ export default {
 </script>
 
 <template>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    <div class="border-black w-min">
-=======
-    <router-link :to="'club/'+idClub" class="border-black w-min">
->>>>>>> Stashed changes
-=======
-    <router-link :to="'club/'+idClub" class="border-black w-min">
->>>>>>> Stashed changes
-        <span class="badge border-none text-white text-[1.05rem] bg-primary-blue float-right">{{ price }} €/pers.</span>
-        <div class="card-box w-[25vw] h-[30vh]">
-            <img :src="imagePath" alt="" class="object-cover w-full h-full">
-            <div class="card-layer text-white">
-                <a href="#">
-                    <h4 class="font-bold text-lg">{{ pays }}</h4>
-                    <h3 class=" font-bold text-2xl">{{ nomResort }}</h3>
-                    <p class="">{{ descriptionResort }}</p>
-                </a>
-            </div>
-        </div>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    </div>
-<<<<<<< HEAD
-    </div>
-=======
     <router-link :to="'club/'+idClub" class="border-black w-min">
         <span class="badge border-none text-white text-[1.05rem] bg-primary-blue float-right">{{ price }} €/pers.</span>
         <div class="card-box w-[25vw] h-[30vh]">
@@ -72,15 +45,6 @@ export default {
             </div>
         </div>
     </router-link>
->>>>>>> Stashed changes
-=======
->>>>>>> merge-alain-clem
-=======
-    </router-link>
->>>>>>> Stashed changes
-=======
-    </router-link>
->>>>>>> Stashed changes
 </template>
 
 <style>

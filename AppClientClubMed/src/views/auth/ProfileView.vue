@@ -6,8 +6,6 @@ import { authStore } from "@/stores/authStore";
 const auth = authStore();
 const user = auth.user.user.userDetails;
 
-console.log(user);
-
 const date = new Date(user.dateNaissance);
 </script>
 

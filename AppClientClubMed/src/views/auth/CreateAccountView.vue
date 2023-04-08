@@ -78,7 +78,7 @@
 						class="rounded-lg bg-white border-primary-blue border-2 px-2 py-1" v-model="confirmpassword"
 						required />
 				</div>
-				<router-link to="login" type="submit"
+				<router-link to="/login" type="submit"
 					class="bg-white border-2 border-primary-blue text-primary-blue px-4 py-2 rounded-lg hover:bg-primary-blue hover:text-white">
 					Créer un compte
 				</router-link>

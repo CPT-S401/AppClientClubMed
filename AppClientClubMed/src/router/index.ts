@@ -4,21 +4,6 @@ import { authStore } from '../stores/authStore.js';
 import * as Public from './importsEachLayer/publicImports.js'
 import * as Auth from './importsEachLayer/authImports.js'
 import * as Admin from './importsEachLayer/adminImports.js'
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-import Login from '@/views/auth/Login.vue'
-import Signin from '@/views/auth/CreateAccount.vue'
->>>>>>> merge-alain-clem
-
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
 import NotFoundPage from '@/views/errors/404NotFoundView.vue'
 
@@ -65,31 +50,8 @@ const router = createRouter({
         { path: 'dashboard', name: 'adminDashboard' , component: Admin.DashboardView}, //  meta: { requiresAuth: true } pour protéger la route
       ]
     },
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
     { path: '/login', name: 'login', component: Auth.LoginView },
     { path: '/register', name: 'register', component: Auth.CreateAccountView },
->>>>>>> Stashed changes
-    {
-      path: '/signin',
-      name: 'signin',
-      component: Signin,
-    },
-    {
-      path: '/login',
-      name: 'login',
-      component: Login,
-    },
-=======
-    { path: '/login', name: 'login', component: Auth.LoginView },
-    { path: '/register', name: 'register', component: Auth.CreateAccountView },
->>>>>>> Stashed changes
-=======
-    { path: '/login', name: 'login', component: Auth.LoginView },
-    { path: '/register', name: 'register', component: Auth.CreateAccountView },
->>>>>>> Stashed changes
     {
       // redirect à la page NotFound si pas de route
       path: '/:pathMatch(.*)*', name: 'notFound', component: NotFoundPage

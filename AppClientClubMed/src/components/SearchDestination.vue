@@ -3,11 +3,6 @@ import { onMounted, ref } from 'vue'
 import { controllers } from '@/stores'
 import Card from '@/components/Card.vue'
 import BlockSectionItem from '@/components/BlockSectionItem.vue'
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-import Card from './Card.vue';
-
-=======
 let clubs = ref([])
 let pays = ref([])
 
@@ -21,59 +16,15 @@ onMounted(async () => {
     //             });
     //     });
     // });
-<<<<<<< Updated upstream
-=======
-let clubs = ref([])
-let pays = ref([])
-
-onMounted(async () => {
-<<<<<<< Updated upstream
->>>>>>> merge-alain-clem
-=======
-    // controllers().PaysController.GetAll()
-    //     .then((response) => {
-    //         response.data.forEach(pays => {
-    //             pays.value.push({
-    //                 id: pays.id,
-    //                 nom: pays.nom
-    //             });
-    //     });
-    // });
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     controllers().ClubController.GetAll()
         .then((response) => {
             response.data.forEach(club => {
                 clubs.value.push({
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< HEAD
                     id: club.id,
                     name: club.nomClub,
                     description: club.description,
                     lien: club.lienMultimedia,
                     nompays: club.nomPays
-=======
-                    name: club.nom,
-                    description: club.description,
-                    lien: club.multimedia[0],
-                    pays: club.pays
->>>>>>> merge-alain-clem
-=======
-                    id: club.id,
-                    name: club.nomClub,
-                    description: club.description,
-                    lien: club.lienMultimedia,
-                    nompays: club.nomPays
->>>>>>> Stashed changes
-=======
-                    id: club.id,
-                    name: club.nomClub,
-                    description: club.description,
-                    lien: club.lienMultimedia,
-                    nompays: club.nomPays
->>>>>>> Stashed changes
                 });
             });
         })
@@ -81,10 +32,6 @@ onMounted(async () => {
             console.log(error)
         });
 });
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> merge-alain-clem
 </script>
 
 <template>
@@ -103,17 +50,6 @@ onMounted(async () => {
             </div>
         </template>
         <template #objectDisplay>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-            <Card imagePath="https://a.travel-assets.com/findyours-php/viewfinder/images/res40/109000/109366.jpg" pays="France" nom-resort="Rosière" description-resort="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Venam, labore..." :price="150"/>
-            <Card imagePath="https://i.f1g.fr/media/madame/704x/sites/default/files/img/2017/06/10-destinations-pour-des-vacances-sur-une-ile-de-reve-photo-32.jpg" pays="France" nom-resort="Rosière" description-resort="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Venam, labore..." :price="150" />
-            <Card imagePath="../components/images/home/imgHome.jpg" pays="France" nom-resort="Rosière" description-resort="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Venam, labore..." :price="150" />
-        </template>
-    </BlockSectionItem>
-    <img src="" alt="">
-=======
         </template>
     </BlockSectionItem>
     <div class="bg-white pb-3">
@@ -123,32 +59,6 @@ onMounted(async () => {
                 :description-resort="club.description" :price="3710" />
         </div>
     </div>
->>>>>>> Stashed changes
-=======
-            <div v-for="club in clubs" :key="club.id">
-                <Card v-for="club in clubs" :key="club.id" :pays="club.pays" :nomResort="club.name" :descriptionResort="club.description" :price="1500" :id="club.id" :imagePath="club.lien" />
-            </div>
-        </template>
-    </BlockSectionItem>
->>>>>>> merge-alain-clem
-=======
-        </template>
-    </BlockSectionItem>
-=======
-        </template>
-    </BlockSectionItem>
->>>>>>> Stashed changes
-    <div class="bg-white pb-3">
-        <h1 class="text-2xl text-primary-blue font-bold">Tous les Club </h1>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4" style="justify-items: center;">
-            <Card v-for="club in clubs" :idClub="club.id" :imagePath="club.lien" :pays="club.nompays" :nom-resort="club.name"
-                :description-resort="club.description" :price="3710" />
-        </div>
-    </div>
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 </template>
  
 <style>
