@@ -25,16 +25,3 @@ onMounted(async () => {
 
     </div> -->
 </template>
-
-<!-- <script setup lang="ts">
-import { controllers } from '@/stores';
-onMounted(async () => {
-    controllers().ClubController.getAll()
-        .then((response) => {
-            console.log(response.data);
-        })
-        .catch((error) => {
-            console.log(error);
-        });
-});
-</script> -->

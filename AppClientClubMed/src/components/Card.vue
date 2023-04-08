@@ -1,9 +1,10 @@
-<script setup lang="ts">
-</script>
-
 <script>
 export default{
     props: {
+        idClub: {
+            type: Number,
+            required: true
+        },
         imagePath: {
             type: String,
             required: true
@@ -30,24 +31,8 @@ export default{
 
 </script>
 
-
-<!-- <template>
-    <div class="border-black w-min">
-    <span class="badge border-none text-white text-[1.05rem] bg-primary-blue float-right">price €/pers.</span> 
-    <div class="card-box w-[15vw] h-[20vh]">
-        <img src="..\components\images\home\imgHome.jpg" alt="" class="object-cover w-full h-full">
-        <div class="card-layer text-white">
-            <a href="#">
-                <h4 class="font-bold text-lg">Pays</h4>
-                <h3 class=" font-bold text-2xl">Nom Resort</h3>
-                <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Venam, labore...</p>
-            </a>
-        </div>
-    </div>
-    </div>
-</template> -->
-
 <template>
+<<<<<<< Updated upstream
     <div class="border-black w-min">
     <span class="badge border-none text-white text-[1.05rem] bg-primary-blue float-right">{{price}} €/pers.</span> 
     <div class="card-box w-[15vw] h-[20vh]">
@@ -61,6 +46,21 @@ export default{
         </div>
     </div>
     </div>
+=======
+    <router-link :to="'club/'+idClub" class="border-black w-min">
+        <span class="badge border-none text-white text-[1.05rem] bg-primary-blue float-right">{{ price }} €/pers.</span>
+        <div class="card-box w-[25vw] h-[30vh]">
+            <img :src="imagePath" alt="" class="object-cover w-full h-full">
+            <div class="card-layer text-white">
+                <a href="#">
+                    <h4 class="font-bold text-lg">{{ pays }}</h4>
+                    <h3 class=" font-bold text-2xl">{{ nomResort }}</h3>
+                    <p class="">{{ descriptionResort }}</p>
+                </a>
+            </div>
+        </div>
+    </router-link>
+>>>>>>> Stashed changes
 </template>
 
 <style>

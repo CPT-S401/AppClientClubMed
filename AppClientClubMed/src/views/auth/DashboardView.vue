@@ -4,6 +4,7 @@
         <h4 class="text-lg font-semibold text-center">Dashboard</h4>
         <p class="mt-2 text-xs text-white dark:text-gray-400">
             Bienvenue sur votre dashboard. Vous êtes bien connecté.
+            
         </p>
     </div>
 </template>
